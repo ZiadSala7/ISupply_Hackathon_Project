@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "297981604603",
+    "project_id": "sign-in-25b87",
+    "storage_bucket": "sign-in-25b87.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:297981604603:android:14c363d1d247138237365e",
+        "android_client_info": {
+          "package_name": "com.example.isupply_hackathon_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlKEbV93IcesoeqgiIBGZdRRAsco6ZZ3A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
