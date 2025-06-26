@@ -1,7 +1,9 @@
+// ignore_for_file: use_build_context_synchronously
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:isupply_hackathon_project/core/utils/app_colors.dart';
-import 'package:isupply_hackathon_project/features/home/presentation/managers/cubit/order_cubit.dart';
+import '../cubit/order_model.dart';
+import '../../../../../core/utils/app_colors.dart';
+import '../../../presentation/managers/cubit/order_cubit.dart';
 
 class ButtonModel {
   final Color buttonColor, textColor;
@@ -22,32 +24,40 @@ List<ButtonModel> buildButtons(BuildContext context) {
       buttonColor: AppColors.greyButton,
       textColor: AppColors.black,
       buttonText: 'Pending',
-      onPressed: () {
-        BlocProvider.of<OrderCubit>(context).onPendingPressed();
+      onPressed: () async {
+        await BlocProvider.of<OrderCubit>(
+          context,
+        ).orderStatusUpdate('Pending', cubitModels[0]);
       },
     ),
     ButtonModel(
       buttonColor: AppColors.greenButton,
       textColor: AppColors.white,
       buttonText: 'Confirmed',
-      onPressed: () {
-        BlocProvider.of<OrderCubit>(context).onConfirmedPressed();
+      onPressed: () async {
+        await BlocProvider.of<OrderCubit>(
+          context,
+        ).orderStatusUpdate('Confirmed', cubitModels[1]);
       },
     ),
     ButtonModel(
       buttonColor: AppColors.blueButton,
       textColor: AppColors.white,
       buttonText: 'Shipped',
-      onPressed: () {
-        BlocProvider.of<OrderCubit>(context).onShippedPressed();
+      onPressed: () async {
+        await BlocProvider.of<OrderCubit>(
+          context,
+        ).orderStatusUpdate('Shipped', cubitModels[2]);
       },
     ),
     ButtonModel(
       buttonColor: AppColors.orangButton,
       textColor: AppColors.black,
       buttonText: 'Delivered',
-      onPressed: () {
-        BlocProvider.of<OrderCubit>(context).onDeliveredPressed();
+      onPressed: () async {
+        await BlocProvider.of<OrderCubit>(
+          context,
+        ).orderStatusUpdate('Delivered', cubitModels[3]);
       },
     ),
   ];

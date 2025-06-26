@@ -26,7 +26,7 @@ class HomeViewBody extends StatelessWidget {
             children: [
               SizedBox(height: 150),
               Text(
-                cubit.message,
+                cubit.currentState,
                 style: AppTextStyles.textStyle40.copyWith(color: cubit.clr),
               ),
               SizedBox(height: 150),
