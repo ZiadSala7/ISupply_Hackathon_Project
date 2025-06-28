@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:isupply_hackathon_project/core/utils/app_text_styles.dart';
-import 'package:isupply_hackathon_project/features/home/data/models/buttons/button_model.dart';
-import 'package:isupply_hackathon_project/features/home/presentation/managers/cubit/order_cubit.dart';
-import 'package:isupply_hackathon_project/features/home/presentation/managers/cubit/order_states.dart';
+import '../../../../../core/utils/app_text_styles.dart';
+import '../../../data/models/buttons/button_model.dart';
+import '../../managers/cubit/order_cubit.dart';
+import '../../managers/cubit/order_states.dart';
 
 import 'buttons_list_view_builder.dart';
 

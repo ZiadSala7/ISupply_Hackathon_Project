@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:isupply_hackathon_project/features/home/presentation/managers/cubit/order_cubit.dart';
+import '../managers/cubit/order_cubit.dart';
 
 import 'widgets/home_view_body.dart';
 
