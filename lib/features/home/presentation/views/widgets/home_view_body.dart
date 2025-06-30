@@ -6,6 +6,7 @@ import '../../managers/cubit/order_cubit.dart';
 import '../../managers/cubit/order_states.dart';
 
 import 'buttons_list_view_builder.dart';
+import 'row_check_boxs.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -29,7 +30,9 @@ class HomeViewBody extends StatelessWidget {
                 cubit.currentState,
                 style: AppTextStyles.textStyle40.copyWith(color: cubit.clr),
               ),
-              SizedBox(height: 150),
+              SizedBox(height: 70),
+              RowCheckBoxs(cubit: cubit),
+              SizedBox(height: 50),
               ButtonsListViewBuilder(buttons: buttons),
             ],
           ),

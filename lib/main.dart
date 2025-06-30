@@ -7,8 +7,8 @@ import 'my_notification_app.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // for a high performance => will take the max time not the sum
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  // for a high performance => will take the max time not the sum
   Future.wait([
     PushNotificationServices.init(),
     LocalNotificationsServices.init(),

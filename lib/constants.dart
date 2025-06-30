@@ -1,4 +1,7 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:isupply_hackathon_project/core/utils/app_colors.dart';
 
 abstract class AppConstants {
   static AndroidNotificationDetails android = const AndroidNotificationDetails(
@@ -10,4 +13,17 @@ abstract class AppConstants {
 
   static const String baseUrl =
       'https://fcm.googleapis.com/v1/projects/sign-in-25b87/messages:send';
+
+  static const Map<String, int> states = {
+    'Pending': 1,
+    'Confirmed': 2,
+    'Shipped': 3,
+    'Delivered': 4,
+  };
+  static const Map<int, Color> checkBoxClrs = {
+    1: AppColors.greyButton,
+    2: AppColors.greenButton,
+    3: AppColors.blueButton,
+    4: AppColors.orangButton,
+  };
 }
