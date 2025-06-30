@@ -9,7 +9,3 @@ class ConfirmedState extends OrderStates {}
 class ShippedState extends OrderStates {}
 
 class DeliveredState extends OrderStates {}
-
-class LoadingState extends OrderStates {}
-
-class FailureState extends OrderStates {}
