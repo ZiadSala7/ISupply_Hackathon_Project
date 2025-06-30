@@ -19,7 +19,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   void initState() {
     Timer(
       Duration(seconds: 5),
-      () => GoRouter.of(context).push(AppRoutes.homeView),
+      () => GoRouter.of(context).pushReplacement(AppRoutes.homeView),
     );
     super.initState();
   }

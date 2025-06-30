@@ -27,7 +27,10 @@ abstract class APINotificationServices {
         data: {
           "message": {
             "token": token,
-            "notification": {"title": title, "body": body},
+            "notification": {
+              "title": "Order Status Update",
+              "body": "Your order changed from $title to $body",
+            },
           },
         },
       );

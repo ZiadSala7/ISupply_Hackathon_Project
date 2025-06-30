@@ -23,5 +23,6 @@ abstract class PushNotificationServices {
   // background notification method
   static Future<void> backgroundMessageHandler(RemoteMessage message) async {
     await Firebase.initializeApp();
+    
   }
 }

@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:isupply_hackathon_project/core/utils/app_text_styles.dart';
 import '../../../../../constants.dart';
 import '../../managers/cubit/order_cubit.dart';
 
 class CustomCheckBox extends StatelessWidget {
+  final OrderCubit cubit;
+  final int compare;
+  final String text;
+
   const CustomCheckBox({
     super.key,
     required this.cubit,
     required this.compare,
     required this.text,
   });
-
-  final OrderCubit cubit;
-  final int compare;
-  final String text;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +28,14 @@ class CustomCheckBox extends StatelessWidget {
               : null,
           size: 35,
         ),
-        Text(text),
+        Text(
+          text,
+          style: AppTextStyles.textStyle18.copyWith(
+            color: cubit.stateNum >= compare
+                ? AppConstants.checkBoxClrs[compare]
+                : Colors.black,
+          ),
+        ),
       ],
     );
   }

@@ -25,14 +25,14 @@ class HomeViewBody extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             spacing: 15,
             children: [
-              SizedBox(height: 150),
+              SizedBox(height: 130),
               Text(
                 cubit.currentState,
                 style: AppTextStyles.textStyle40.copyWith(color: cubit.clr),
               ),
-              SizedBox(height: 70),
-              RowCheckBoxs(cubit: cubit),
               SizedBox(height: 50),
+              RowCheckBoxs(cubit: cubit),
+              SizedBox(height: 70),
               ButtonsListViewBuilder(buttons: buttons),
             ],
           ),
