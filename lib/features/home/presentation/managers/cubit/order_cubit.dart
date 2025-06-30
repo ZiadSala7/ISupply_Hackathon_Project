@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -26,7 +24,6 @@ class OrderCubit extends Cubit<OrderStates> {
     currentState = newState;
     // stateNum for changing the checkBox in homeView
     stateNum = AppConstants.states[newState] ?? 0;
-    log(stateNum.toString());
     emit(model.state);
   }
 }
