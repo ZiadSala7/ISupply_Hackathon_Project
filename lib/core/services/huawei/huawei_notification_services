@@ -1,0 +1,9 @@
+abstract class HuaweiPushNotificationService {
+  static Future<void> init() async {}
+
+  static Future<String?> getToken() async {
+    return 'Token';
+  }
+
+  static void onMessageReceived(RemoteMessage message) {}
+}

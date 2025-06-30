@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:isupply_hackathon_project/core/utils/app_routes.dart';
+import 'core/utils/app_routes.dart';
 
 class MyNotificationApp extends StatelessWidget {
   const MyNotificationApp({super.key});

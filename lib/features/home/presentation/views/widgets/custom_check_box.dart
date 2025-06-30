@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:isupply_hackathon_project/core/utils/app_text_styles.dart';
+import '../../../../../core/utils/app_text_styles.dart';
 import '../../../../../constants.dart';
 import '../../managers/cubit/order_cubit.dart';
 

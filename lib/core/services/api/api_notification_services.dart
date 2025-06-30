@@ -1,7 +1,7 @@
 import 'dart:developer';
 
 import 'package:dio/dio.dart';
-import '../../../constants.dart';
+import '../../utils/app_strings.dart';
 import '../firebase/push_notification_services.dart';
 
 abstract class APINotificationServices {
@@ -16,7 +16,7 @@ abstract class APINotificationServices {
     log(token!);
     try {
       final response = await _dio.post(
-        AppConstants.baseUrl,
+        AppStrings.baseUrl,
         options: Options(
           headers: {
             'Content-Type': 'application/json',
