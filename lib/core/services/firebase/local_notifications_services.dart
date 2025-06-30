@@ -28,8 +28,8 @@ abstract class LocalNotificationsServices {
     );
     await localNotificationsPlugin.show(
       1,
-      'Order Status Update',
-      'Your order changed from ${message.notification!.title} to ${message.notification!.body}',
+      message.notification!.title,
+      message.notification!.body,
       details,
       payload: 'Payload data',
     );

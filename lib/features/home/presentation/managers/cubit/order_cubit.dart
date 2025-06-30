@@ -18,7 +18,10 @@ class OrderCubit extends Cubit<OrderStates> {
     if (currentState == newState) return;
     clr = model.color;
     RemoteMessage message = RemoteMessage(
-      notification: RemoteNotification(title: currentState, body: newState),
+      notification: RemoteNotification(
+        title: "Order Status Update",
+        body: "Your order changed from $currentState to $newState",
+      ),
     );
     await LocalNotificationsServices.showBasicNotification(message);
     currentState = newState;
